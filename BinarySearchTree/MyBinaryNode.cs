@@ -112,5 +112,17 @@ namespace BinarySearchTree
             PostOrder(root.right);
             Console.WriteLine(root.data + " ");
         }
+        /// <summary>
+        /// length of bst
+        /// </summary>
+        /// <param name="root"></param>
+        /// <returns></returns>
+        public int Size(INode<T> root)
+        {
+            if (root == null)
+                return 0;
+            else
+                return (Size(root.left) + 1 + Size(root.right));
+        }
     }
 }
